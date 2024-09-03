@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<script type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<img src="welcome.png" style="display: block;margin: auto;">
+	<!--<button onclick="document.getElementById('id01').style.display='block'">Login</button>-->
+
+<!-- The Modal -->
+<div id="id01" class="modal">
+  <!--<span onclick="document.getElementById('id01').style.display='none'"
+class="close" title="Close Modal">&times;</span>-->
+
+  <!-- Modal Content -->
+  <form class="modal-content animate" action="/sign_up" method="POST" style="align-self: center">
+
+    <div class="container">
+      <label class = "tex" for="uname">USERNAME
+      <input type="text" placeholder="Enter Username" name="uname" required></label>
+      <br>
+      <br>
+      <label class="tex" for="psw">PASSWORD
+      <input type="password" placeholder="Enter Password" name="psw" required></label>
+      <br>
+      <br>
+      <button class="ini" type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+    <button type="reset" class="cancelbtn">Reset</button>
+  </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+form {
+    font-family: "Century Gothic";
+    text-align: center;
+    /*margin: auto;*/
+  }
+  
+  /* Full-width inputs */
+  input[type=text], input[type=password] {
+    padding: 12px 30px;
+    margin-left: auto;
+    display: inline-block;
+    border: none;
+    border-radius: 10px;
+    background: none;
+    font-family: "Trebuchet MS";
+    font-style: bold;
+  }
+  input:click {
+    border: none;
+  }
+  input:active {
+    box-shadow: 20px;
+  }
+  button
+  {
+    text-decoration: none;
+    padding: 20px 50px;
+    font-size: 1.25rem;
+    position: relative;
+    font-family: "Century Gothic";
+    
+  }
+  /* Set a style for all buttons */
+  button.ini {
+    background-color: #43cfd1;
+    border: none;
+    overflow: hidden;
+    color: white;
+    border-radius: 30px;
+    box-shadow: 0 0 0 0 rgba(143,63,248,0.5),0 0 0 0 rgba(39,200,255,0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+
+  }
+
+  button.ini::after
+  {
+    content: "";
+    width:400px;
+    height:400px;
+    position: absolute;
+    top: -50px;
+    left: -100px;
+    background-color:#ff3cac;
+    background-image: linear-gradient(225deg,#61047a 0%,#75ebeb 50%,#14898d 100%);
+    z-index: -1;
+    transition: transform 0.5s ease;
+  }
+  
+  /* Add a hover effect for buttons */
+  button.ini:hover {
+    transform: translate(0,-6px);
+    box-shadow: 10px -10px 25px 0 rgba(143,63,248,0.5),-10px 10px 25px 0 rgba(39,200,255,0.5);
+
+
+  }
+  button.ini:hover::after
+  {
+    transform: rotate(150deg);
+  }
+  
+  /* Extra style for the cancel button (red) */
+  button.cancelbtn {
+    background-color: #e06a0a;
+    border: none;
+    overflow: hidden;
+    color: white;
+    border-radius: 30px;
+    box-shadow: 0 0 0 0 rgba(249, 114, 31, 0.63),0 0 0 0 rgba(206, 214, 56, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  button.cancelbtn::after
+  {
+    content: "";
+    width:400px;
+    height:400px;
+    position: absolute;
+    top: -50px;
+    left: -100px;
+    background-color:#ff3cac;
+    background-image: linear-gradient(225deg,#e5621c 0%,#eda405 50%,#e00a0a 100%);
+    z-index: -1;
+    transition: transform 0.5s ease;
+  }
+
+  button.cancelbtn:hover {
+    transform: translate(0,-6px);
+    box-shadow: 10px -10px 25px 0 rgba(249, 114, 31, 0.63),-10px 10px 25px 0 rgba(206, 214, 56, 0.5);
+  }
+
+  button.cancelbtn:hover::after
+  {
+    transform: rotate(150deg);
+  }
+  
+  /* Center the avatar image inside this container */
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+  
+  /* Avatar image */
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  /* Add padding to containers */
+  .container {
+    padding: 16px;
+  }
+  
+  /* The "Forgot password" text */
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  @media screen and (max-width: 300px) {
+    span.psw {
+      display: block;
+      float: none;
+    }
+  }
+  label.tex{
+    background-image: radial-gradient(#FFFFFF 0%,#0ebcd7 90%,#FFFFFF 100%);
+padding: 15px;
+    /*border:2px solid #000000;*/
+    border-radius: 20px;
+    width: 100px; 
+    font-family: "Century Gothic";
+    box-shadow: 0 0 0 0 rgba(200, 200,200, 0.63),0 0 0 0 rgba(180,180,180, 0.5);
+    transition:  box-shadow 0.3s ease;
+    font-weight: bold;
+    color: rgba(5, 5, 5, 0.689);
+  }
+  label.tex::after{
+    top: -50px;
+    left: -100px;
+  }
+  label.tex:hover
+  {
+    box-shadow: 5px -5px 15px 0 rgba(150, 150,150, 0.63),-5px 5px 15px 0 rgba(100,100,100, 0.5);
+
+  }
+  body
+  {
+    background-image: url('Background.jpg')
+  }
+  *
+  {
+    border:none;
+  }

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Double Pendulum</title>
+    <meta name="title" content="Double Pendulum" />
+    <meta
+      name="description"
+      content="Interactive Double Pendulum Playground Using SVG"
+    />
+    <link rel="stylesheet" href="game.css" />
+  </head>
+  <body>
+
+
+    <!-- to create all the objects strings(wires) and obj -->
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" id="container">
+      <circle id="base" />
+      <line id="upper_string" />
+      <circle id="upper_bob" />
+      <line id="lower_string" />
+      <circle id="lower_bob" />
+      <path id="tracer" />
+    </svg>
+
+    <!-- menu  -->
+    <div class="menu">
+      <button id="pause">| |</button>
+      <span id="reset" onclick="refresh()">RESET</span>
+      <div class="toggles">
+        <span id="trace">
+          <input
+            type="checkbox"
+            onchange="tracer.setActive(this.checked)"
+            id="resetbox"
+            checked
+          />
+          <label for="resetbox">SHOW TRACE?</label>
+        </span>
+      </div>
+
+      <!-- toggle  -->
+      <div class="toggles">
+        <span id="persist">
+          <input
+            type="checkbox"
+            onchange="tracer.setMAX(this.checked ? 10000 : 500)"
+            id="persistbox"
+          />
+          <label for="persistbox">PERSIST TRACE?</label>
+        </span>
+        <span id="smoothen">
+          <input
+            type="checkbox"
+            onchange="tracer.smoothen=this.checked"
+            id="smoothenbox"
+          />
+          <label for="smoothenbox">SMOOTHEN TRACE?</label>
+        </span>
+      </div>
+      <div class="toggles">
+        <span id="gravity">
+          <input
+            type="checkbox"
+            onchange="doublePendulum.setGravity(this.checked ? 0.1 : 0)"
+            id="gravitybox"
+            checked
+          />
+          <label for="gravitybox">GRAVITY?</label>
+        </span>
+        <span id="gravity">
+          <input
+            type="checkbox"
+            onchange="togglePendulum(this.checked)"
+            id="gravitybox"
+            checked
+          />
+          <label for="gravitybox">SHOW PENDULUM?</label>
+        </span>
+      </div>
+
+      <!-- masses  -->
+      <div class="masses">
+        <span class="mass">
+          <span onclick="doublePendulum.decreaseUpperMass()">-</span>
+          <span>UPPER MASS</span>
+          <span onclick="doublePendulum.increaseUpperMass()">+</span>
+        </span>
+        <span class="mass">
+          <span onclick="doublePendulum.decreaseLowerMass()">-</span>
+          <span>LOWER MASS</span>
+          <span onclick="doublePendulum.increaseLowerMass()">+</span>
+        </span>
+      </div>
+
+      <!-- speed  -->
+      <span class="speed">
+        <span onclick="doublePendulum.decreaseSpeed()">-</span>
+        <span>SPEED</span>
+        <span onclick="doublePendulum.increaseSpeed()">+</span>
+      </span>
+    </div>
+  </body>
+  <script src="game.js"></script>
+</html>
